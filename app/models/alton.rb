@@ -1,0 +1,2 @@
+class Alton < ApplicationRecord
+end

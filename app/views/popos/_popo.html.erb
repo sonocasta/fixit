@@ -1,0 +1,32 @@
+<div id="<%= dom_id popo %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= popo.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Date:</strong>
+    <%= popo.date.strftime('%d-%m-%Y') %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Car:</strong>
+    <%= popo.car %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Description:</strong>
+    <%= popo.description %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Phone:</strong>
+    <%= popo.phone %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this popo", popo, class: "rounded-lg py-3 px-5 bg-gray-300 inline-block font-medium" %>
+    <%= link_to 'Edit this popo', edit_popo_path(popo), class: "rounded-lg py-3 ml-2 px-5 bg-gray-300 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
